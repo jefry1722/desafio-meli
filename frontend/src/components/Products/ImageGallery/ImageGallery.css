@@ -1,0 +1,16 @@
+.thumbnails {
+  max-height: 500px;
+  min-width: 52px;
+}
+
+.image {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.main-image {
+  max-height: 500px;
+  max-width: 200px;
+}
