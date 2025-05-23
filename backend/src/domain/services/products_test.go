@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestGetProductDetailByIDSuccess(t *testing.T) {
+func TestGetProductDetailByID_Success(t *testing.T) {
 	id := "124"
 	productsFinder := mocks.NewMockIProductsFinder(t)
 
@@ -29,7 +29,7 @@ func TestGetProductDetailByIDSuccess(t *testing.T) {
 	assert.Equal(t, productsResponse.ID, product.ID)
 }
 
-func TestGetProductDetailByIDError(t *testing.T) {
+func TestGetProductDetailByID_Error(t *testing.T) {
 	id := "124"
 	productsFinder := mocks.NewMockIProductsFinder(t)
 

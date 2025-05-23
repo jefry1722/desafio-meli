@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestGetProductDetailByIDSuccesfull(t *testing.T) {
+func TestGetProductDetailByID_Success(t *testing.T) {
 	gin.SetMode(gin.TestMode)
 	id := "12"
 
@@ -43,7 +43,7 @@ func TestGetProductDetailByIDSuccesfull(t *testing.T) {
 	assert.Equal(t, productsResponse.Title, product.Title)
 }
 
-func TestGetProductDetailByIDErrorProductoNoEncontrado(t *testing.T) {
+func TestGetProductDetailByID_ErrorProductoNoEncontrado(t *testing.T) {
 	gin.SetMode(gin.TestMode)
 	id := "56"
 
@@ -61,7 +61,7 @@ func TestGetProductDetailByIDErrorProductoNoEncontrado(t *testing.T) {
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
-func TestGetProductDetailByIDErrorIntenal(t *testing.T) {
+func TestGetProductDetailByID_ErrorIntenal(t *testing.T) {
 	gin.SetMode(gin.TestMode)
 	id := "56"
 
